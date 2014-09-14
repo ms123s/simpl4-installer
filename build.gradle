@@ -15,7 +15,7 @@ repositories {
 
 apply plugin: 'izpack'
 dependencies {
-    izpack 'org.codehaus.izpack:izpack-standalone-compiler:4.3.4'
+    izpack 'org.codehaus.izpack:izpack-standalone-compiler:4.3.5'
 }
 defaultTasks "izPackCreateInstaller"
 
@@ -25,7 +25,7 @@ ext.rootDir=gradle.getRootProject().getRootDir().toString()
 version='1.0.0'
 
 izpack {
-    baseDir = file("${rootDir}/izpack")
+    baseDir = file("${rootDir}")
     installFile = file("${rootDir}/installer.xml")
     outputFile = file("${rootDir}/simpl4-${version}-installer.jar")
     compression = 'deflate'

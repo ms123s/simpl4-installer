@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<project default="install">
+    <path id="build.classpath">
+        <fileset dir="lib">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+    <taskdef name="izpack" classpathref="build.classpath" classname="com.izforge.izpack.ant.IzPackTask" />
+ 
+    <target name="install">
+        <izpack input="installer.xml"
+                output="simpl4-installer.jar"
+                inheritAll="false"
+                compressionLevel="9"
+                compression="bzip2"
+                basedir="${basedir}" />
+    </target>
+</project>
