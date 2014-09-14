@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        mavenCentral()
         jcenter()
     }
 
@@ -7,7 +8,12 @@ buildscript {
         classpath 'org.gradle.api.plugins:gradle-izpack-plugin:0.2.3'
     }
 }
+repositories {
+	mavenCentral()
+	jcenter()
+}
 
+apply plugin: 'izpack'
 dependencies {
     izpack 'org.codehaus.izpack:izpack-standalone-compiler:4.3.4'
 }
@@ -15,14 +21,13 @@ defaultTasks "izPackCreateInstaller"
 
 ext.rootDir=gradle.getRootProject().getRootDir().toString()
 
-apply plugin: 'izpack'
 
 version='1.0.0'
 
 izpack {
-    baseDir = file("$rootDir/izpack")
-    installFile = file('$rootDir/installer.xml')
-    outputFile = file("$rootDir/simpl4-${version}-installer.jar")
+    baseDir = file("${rootDir}/izpack")
+    installFile = file("${rootDir}/installer.xml")
+    outputFile = file("${rootDir}/simpl4-${version}-installer.jar")
     compression = 'deflate'
     compressionLevel = 9
     appProperties = ['app.group': 'simpl4', 'app.name': 'Simpl4', 'app.title': 'Simpl4',

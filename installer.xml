@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<izpack:installation version="5.0" xmlns:izpack="http://izpack.org/schema/installation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+  <!--
+        @author  Manfred  Sattler
+    -->
+  <!--
+        The info section.
+        The meaning of the tags should be natural ...
+    -->
+  <info>
+    <appname>Simpl4</appname>
+    <appversion>1.0</appversion>
+    <authors>
+      <author name="Manfred Sattler" email="ms@simpl4.org" />
+    </authors>
+    <url>http://simpl4.org</url>
+  </info>
+  <!-- 
+        The gui preferences indication.
+        Sets the installer window to 640x480. It will not be able to change the size.
+    -->
+  <guiprefs width="640" height="480" resizable="no" />
+  <!-- 
+        The locale section.
+        Asks here to include the English and German langpacks.
+    -->
+  <locale>
+    <langpack iso3="deu" />
+    <langpack iso3="eng" />
+  </locale>
+  <listeners>
+    <listener classname="ChmodCompilerListener" />
+    <listener classname="ChmodInstallerListener" />
+  </listeners>
+  <!--
+        The panels section.
+        We indicate here which panels we want to use. The order will be respected.
+    -->
+  <panels>
+    <panel classname="HelloPanel" />
+    <panel classname="TargetPanel" />
+    <panel classname="InstallPanel" />
+    <panel classname="FinishPanel" />
+  </panels>
+  <!--
+        The packs section.
+        We specify here our packs.
+    -->
+  <packs>
+    <pack name="all" required="yes">
+      <description>All required file</description>
+      <fileset dir="/root/dev/simpl4-deployed" targetdir="install">
+        <additionaldata key="permission.file" value="0666" />
+        <additionaldata key="permission.dir" value="0711" />
+      </fileset>
+    </pack>
+  </packs>
+</izpack:installation>
