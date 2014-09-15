@@ -24,12 +24,14 @@
 			<os family="windows" />
 			<executefile name="$INSTALL_PATH/bin/setup.bat" workingDir="$INSTALL_PATH">
 				<arg>$INSTALL_PATH</arg>
+				<arg>$portno</arg>
 			</executefile>
 		</job>
 		<job name="do setup">
 			<os family="unix" />
 			<executefile name="$INSTALL_PATH/bin/setup.sh" workingDir="$INSTALL_PATH">
 				<arg>$INSTALL_PATH</arg>
+				<arg>$portno</arg>
 			</executefile>
 		</job>
 </processing>

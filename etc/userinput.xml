@@ -1,0 +1,16 @@
+<userinput>
+  <panel order="1" id="common">
+    <field type="title" txt="Simpl4 Configuration" bold="true" size="2"></field>
+    <field type="space"></field>
+    <field type="divider" align="bottom"></field>
+    <field type="space"></field>
+    <field type="text" variable="portno">
+      <spec txt="Port Number:" id="Port No:" size="8" set="8080"></spec>
+			<validator class="com.izforge.izpack.util.RegularExpressionValidator" txt="Portno is not correct!">
+				<param name="pattern" value="[0-9]{3,4}" />
+			</validator>
+    </field>
+    <field type="space"></field>
+    <field type="divider" align="bottom"></field>
+  </panel>
+</userinput>

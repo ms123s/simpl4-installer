@@ -30,6 +30,8 @@
   <panels>
     <panel classname="CheckedHelloPanel" />
     <panel classname="TargetPanel" />
+		<panel classname="UserInputPanel" id="common">
+		</panel>
     <panel classname="InstallPanel" />
     <panel classname="ProcessPanel" />
     <panel classname="ShortcutPanel"/>
@@ -73,6 +75,7 @@
 		<res id="TargetPanel.dir.unix" src="etc/installpath.unix.txt"/>
     <res id="shortcutSpec.xml" src="etc/shortcut.xml"/>
 		<res id="RegistrySpec.xml" src="etc/registry.xml"/>
+		<res id="userInputSpec.xml" src="etc/userinput.xml"/>
 	</resources>
 
 		<native type="izpack" name="ShellLink.dll" />
