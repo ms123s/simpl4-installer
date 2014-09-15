@@ -50,7 +50,7 @@
   <packs>
     <pack name="all" required="yes">
       <description>All required file</description>
-      <fileset dir="/root/dev/simpl4-deployed" targetdir="$INSTALL_PATH">
+      <fileset dir="../simpl4-deployed" targetdir="$INSTALL_PATH">
         <additionaldata key="permission.file" value="0666" />
         <additionaldata key="permission.dir" value="0711" />
       </fileset>
