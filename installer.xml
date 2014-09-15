@@ -54,6 +54,10 @@
         <additionaldata key="permission.file" value="0666" />
         <additionaldata key="permission.dir" value="0711" />
       </fileset>
+			<executable targetfile="$INSTALL_PATH/bin/start.sh" os="unix" stage="never" failure="warn" keep="true"/>
+			<executable targetfile="$INSTALL_PATH/bin/setup.sh" os="unix" stage="never" failure="warn" keep="true"/>
+			<executable targetfile="$INSTALL_PATH/bin/start.cmd" os="windows" stage="never" failure="warn" keep="true"/>
+			<executable targetfile="$INSTALL_PATH/bin/setup.bat" os="windows" stage="never" failure="warn" keep="true"/>
     </pack>
   </packs>
   <native type="izpack" name="ShellLink.dll" />
