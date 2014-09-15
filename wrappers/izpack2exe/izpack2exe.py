@@ -73,7 +73,8 @@ def create_exe(settings):
     if (os.access('installer.7z', os.F_OK)):
         os.remove('installer.7z')
     files = '" "'.join(settings.file)
-    p7zcmd = '"%s" a -mmt -t7z -mx=9 installer.7z "%s"' % (p7z, files)
+    p7zcmd = '"%s" a -mmt -t7z -mx=9 installer.7z %s' % (p7z, files)
+    print(p7zcmd,"|",files)
     subprocess.call(p7zcmd, shell=use_shell)
     
     config = open('config.txt', 'w')

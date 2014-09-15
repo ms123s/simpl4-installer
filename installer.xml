@@ -60,8 +60,10 @@
 		<res id="Installer.image.3" src="images/logo.png" />
 		<res id="Installer.image.4" src="images/logo.png" />
 		<res id="Installer.image.5" src="images/logo.png" />
- <res id="ProcessPanel.Spec.xml" src="processing-tasks.xml"/>
- <res id="ProcessPanel.Spec.xml_deu" src="processing-tasks.xml"/>
+		<res id="ProcessPanel.Spec.xml" src="etc/processing-tasks.xml"/>
+		<res id="ProcessPanel.Spec.xml_deu" src="etc/processing-tasks.xml"/>
+		<res id="TargetPanel.dir.windows" src="etc/installpath.windows.txt"/>
+		<res id="TargetPanel.dir.unix" src="etc/installpath.unix.txt"/>
 	</resources>
 
 </installation>
