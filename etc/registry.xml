@@ -1,0 +1,17 @@
+<registry>     
+  <pack name="UninstallStuff">         
+   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="DisplayName" root="HKLM" string="$UNINSTALL_NAME"></value>
+   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="UninstallString" root="HKLM" string="&quot;$JAVA_HOME\bin\javaw.exe&quot; -jar &quot;$INSTALL_PATH\uninstaller\uninstaller.jar&quot;"></value>
+   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="DisplayIcon" root="HKLM" string="$INSTALL_PATH\bin\logo.ico"></value>
+   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="HelpLink" root="HKLM" string="$APP_URL"></value>
+  </pack>     
+  <pack name="Base"> 
+        <key keypath="SOFTWARE\Simpl4\$UNINSTALL_NAME\testk" root="HKLM"></key>
+  <value keypath="SOFTWARE\Simpl4\$UNINSTALL_NAME" name="Path" root="HKLM" string="$INSTALL_PATH"></value>
+  <value dword="42" keypath="SOFTWARE\Simpl4\$UNINSTALL_NAME" name="DWORD" root="HKLM"></value>
+  <value keypath="SOFTWARE\Simpl4\$UNINSTALL_NAME" name="BIN" root="HKLM">
+    <bin data="42, 49, 4e, 20, 54, 45, 53, 54"></bin>
+    <bin data="42, 49, 4e, 20, 54, 45, 53, 54"></bin>         
+  </value>
+ </pack>
+</registry>

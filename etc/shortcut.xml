@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<shortcuts>
+<programGroup defaultName="Simpl4" location="applications"/>
+<shortcut
+    name = "Simpl4"
+    target = "$INSTALL_PATH\bin\start.cmd"
+    commandLine = ""
+    workingDirectory= "$INSTALL_PATH"
+    description="Starten vom Simpl4"
+    iconFile="$INSTALL_PATH\bin\logo.ico"
+    iconIndex="0"
+    initialState="noShow"
+    programGroup="yes"
+    desktop="yes"
+    applications="yes"
+    startMenu="yes"
+    startup="yes"/>
+</shortcuts>
