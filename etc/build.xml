@@ -1,5 +1,35 @@
 <project>
-    <target name="uninstallservice">
-        <touch file="${INSTALL_PATH}/beforepacks.txt"/>
-    </target>
+  <target name="init" unless="init.done">
+    <property name="init.done" value="true" />
+    <condition property="osfamily-mac">
+      <os family="mac" />
+    </condition>
+    <condition property="osfamily-unix">
+      <and>
+        <os family="unix" />
+        <not>
+          <os family="mac" />
+        </not>
+      </and>
+    </condition>
+    <condition property="osfamily-windows">
+      <os family="windows" />
+    </condition>
+  </target>
+
+  <target name="additional_install" depends="init,additional_install_windows"></target>
+  <target name="additional_install_windows" if="osfamily-windows">
+    <!--exec executable="cmd">
+      <arg value="/c" />
+      <arg value="${INSTALL_PATH}\bin\installservice.bat" />
+    </exec-->
+  </target>
+
+  <target name="additional_uninstall" depends="init,additional_uninstall_windows"></target>
+  <target name="additional_uninstall_windows" if="osfamily-windows">
+    <exec executable="cmd">
+      <arg line="/c ${INSTALL_PATH}\bin\uninstallservice.bat ${INSTALL_PATH} >/tmp/uninstall.log" />
+    </exec>
+  </target>
+
 </project>

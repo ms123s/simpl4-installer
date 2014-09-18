@@ -26,6 +26,10 @@
 				<arg>$INSTALL_PATH</arg>
 				<arg>$portno</arg>
 			</executefile>
+			<executefile name="$INSTALL_PATH/bin/installservice.bat" workingDir="$INSTALL_PATH">
+				<arg>$INSTALL_PATH</arg>
+				<arg>$portno</arg>
+			</executefile>
 		</job>
 		<job name="do setup">
 			<os family="unix" />
