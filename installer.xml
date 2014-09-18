@@ -21,10 +21,13 @@
 			<listener compiler="ChmodCompilerListener" installer="ChmodInstallerListener">
 			</listener>
 	</listeners-->
+	<jar src="lib/ant.jar" stage="both" />
+	<jar src="lib/ant-launcher.jar" stage="both" />
 	<listeners>
 		<listener installer="RegistryInstallerListener" uninstaller="RegistryUninstallerListener">
 			<os family="windows" />
 		</listener>
+	  <listener installer="AntActionInstallerListener" uninstaller="AntActionUninstallerListener" />
 	</listeners>
 
   <panels>
@@ -45,6 +48,7 @@
         <additionaldata key="permission.file" value="0666" />
         <additionaldata key="permission.dir" value="0711" />
       </fileset>
+			<file src="etc/build.xml" targetdir="$INSTALL_PATH/etc/"/>
 			<executable targetfile="$INSTALL_PATH/bin/start.sh" os="unix" stage="never" failure="warn" keep="true"/>
 			<executable targetfile="$INSTALL_PATH/bin/setup.sh" os="unix" stage="never" failure="warn" keep="true"/>
 			<executable targetfile="$INSTALL_PATH/bin/start.cmd" os="windows" stage="never" failure="warn" keep="true"/>
@@ -76,6 +80,7 @@
     <res id="shortcutSpec.xml" src="etc/shortcut.xml"/>
 		<res id="RegistrySpec.xml" src="etc/registry.xml"/>
 		<res id="userInputSpec.xml" src="etc/userinput.xml"/>
+		<res id="AntActionsSpec.xml" src="etc/antactions.xml" />
 	</resources>
 
 		<native type="izpack" name="ShellLink.dll" />

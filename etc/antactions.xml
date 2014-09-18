@@ -1,0 +1,8 @@
+<antactions version="1.0">
+  <pack name="simpl4">
+    <antcall order="beforepacks" quiet="no" verbose="yes" buildfile="$INSTALL_PATH/etc/build.xml">
+      <property name="INSTALL_PATH" value="$INSTALL_PATH" />
+      <target name="uninstallservice" />
+    </antcall>
+	</pack>
+</antactions>
