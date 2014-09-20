@@ -16,4 +16,14 @@
 						compression="deflate" 
 						basedir="${basedir}" />
   </target>
+  <target name="exe">
+    <exec executable="sh">
+      <arg line="-c exewrapper.sh" />
+    </exec>
+  </target>
+  <target name="deploy">
+    <exec executable="scp">
+      <arg line="simpl4-installer.exe ms://usr/share/nginx/html/download/" />
+    </exec>
+  </target>
 </project>

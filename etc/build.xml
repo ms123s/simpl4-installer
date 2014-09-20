@@ -28,7 +28,7 @@
   <target name="additional_uninstall" depends="init,additional_uninstall_windows"></target>
   <target name="additional_uninstall_windows" if="osfamily-windows">
     <exec executable="cmd">
-      <arg line="/c ${INSTALL_PATH}\bin\uninstallservice.bat ${INSTALL_PATH} >/tmp/uninstall.log" />
+      <arg line="/c ${INSTALL_PATH}\bin\uninstallservice.bat ${INSTALL_PATH}" />
     </exec>
   </target>
 

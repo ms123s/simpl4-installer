@@ -1,8 +1,9 @@
 <registry>     
   <pack name="UninstallStuff">         
    <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="DisplayName" root="HKLM" string="$UNINSTALL_NAME"></value>
-   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="UninstallString" root="HKLM" string="&quot;$JAVA_HOME\bin\javaw.exe&quot; -jar &quot;$INSTALL_PATH\uninstaller\uninstaller.jar&quot;"></value>
-   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="DisplayIcon" root="HKLM" string="$INSTALL_PATH\bin\logo.ico"></value>
+   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="UninstallString" root="HKLM" string="&quot;$INSTALL_PATH\jre\bin\javaw.exe&quot; -jar &quot;$INSTALL_PATH\uninstaller\uninstaller.jar&quot;"></value>
+   <!--value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="UninstallString" root="HKLM" string="&quot;$JAVA_HOME\bin\javaw.exe&quot; -jar &quot;$INSTALL_PATH\uninstaller\uninstaller.jar&quot;"></value-->
+   <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="DisplayIcon" root="HKLM" string="$INSTALL_PATH\etc\logo.ico"></value>
    <value keypath="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$UNINSTALL_NAME" name="HelpLink" root="HKLM" string="$APP_URL"></value>
   </pack>     
   <pack name="Base"> 

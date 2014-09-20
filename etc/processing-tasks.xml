@@ -29,6 +29,7 @@
 			<executefile name="$INSTALL_PATH/bin/installservice.bat" workingDir="$INSTALL_PATH">
 				<arg>$INSTALL_PATH</arg>
 				<arg>$portno</arg>
+				<arg>$installService</arg>
 			</executefile>
 		</job>
 		<job name="do setup">

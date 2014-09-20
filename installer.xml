@@ -55,7 +55,7 @@
 			<executable targetfile="$INSTALL_PATH/bin/setup.bat" os="windows" stage="never" failure="warn" keep="true"/>
 			<executable targetfile="$INSTALL_PATH/server/run.sh" os="unix" stage="never" failure="warn" keep="true"/>
     </pack>
-    <pack name="jre" os="windows" required="yes">
+    <pack name="jre" os="windows" uninstall="true" required="yes">
       <description>Java</description>
       <fileset dir="jre/winjre" targetdir="$INSTALL_PATH/jre">
         <additionaldata key="permission.file" value="0666" />

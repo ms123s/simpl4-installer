@@ -7,12 +7,12 @@
     commandLine = ""
     workingDirectory= "$INSTALL_PATH"
     description="Starten vom Simpl4"
-    iconFile="$INSTALL_PATH\bin\logo.ico"
+    iconFile="$INSTALL_PATH\etc\logo.ico"
     iconIndex="0"
     initialState="noShow"
     programGroup="yes"
     desktop="yes"
     applications="yes"
     startMenu="yes"
-    startup="yes"/>
+    startup="no"/>
 </shortcuts>

@@ -6,11 +6,15 @@
     <field type="space"></field>
     <field type="text" variable="portno">
       <spec txt="Port Number:" id="Port No:" size="8" set="8080"></spec>
-			<validator class="com.izforge.izpack.util.RegularExpressionValidator" txt="Portno is not correct!">
-				<param name="pattern" value="[0-9]{3,4}" />
-			</validator>
+      <validator class="com.izforge.izpack.util.RegularExpressionValidator" txt="Portno is not correct!">
+        <param name="pattern" value="[0-9]{3,4}" />
+      </validator>
     </field>
     <field type="space"></field>
+    <field type="check" variable="installService">
+      <description align="left" txt="Install service" id="description.check.1" />
+      <spec txt="" id="installService" true="on" false="off" set="true" />
+    </field>
     <field type="divider" align="bottom"></field>
   </panel>
 </userinput>
