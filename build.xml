@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project default="install">
+<project default="all">
   <path id="build.classpath">
     <fileset dir="lib">
       <include name="*.jar" />
@@ -8,7 +8,7 @@
 
   <taskdef name="izpack" classpathref="build.classpath" classname="com.izforge.izpack.ant.IzPackTask" />
 
-  <target name="install">
+  <target name="build">
     <izpack input="installer.xml" 
 						output="simpl4-installer.jar" 
 						inheritAll="false" 
@@ -18,12 +18,14 @@
   </target>
   <target name="exe">
     <exec executable="sh">
-      <arg line="-c exewrapper.sh" />
+      <arg line="-c bin/exewrapper.sh" />
     </exec>
   </target>
   <target name="deploy">
     <exec executable="scp">
       <arg line="simpl4-installer.exe ms://usr/share/nginx/html/download/" />
     </exec>
+  </target>
+  <target name="all" depends="build,exe,deploy">
   </target>
 </project>
