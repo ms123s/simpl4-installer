@@ -21,11 +21,14 @@
       <arg line="-c bin/exewrapper.sh" />
     </exec>
   </target>
+  <target name="update-global">
+    <exec executable="update-deploy-global.sh"/>
+  </target>
   <target name="deploy">
     <exec executable="scp">
       <arg line="simpl4-installer.exe ms://usr/share/nginx/html/download/" />
     </exec>
   </target>
-  <target name="all" depends="build,exe,deploy">
+  <target name="all" depends="update-global,build,exe,deploy">
   </target>
 </project>
