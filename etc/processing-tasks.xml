@@ -23,7 +23,9 @@
 		<job name="do setup">
 			<os family="windows" />
 			<executefile name="$INSTALL_PATH/bin/setup.bat" workingDir="$INSTALL_PATH">
+				<arg>-d</arg>
 				<arg>$INSTALL_PATH</arg>
+				<arg>-p</arg>
 				<arg>$portno</arg>
 			</executefile>
 			<executefile name="$INSTALL_PATH/bin/installservice.bat" workingDir="$INSTALL_PATH">
